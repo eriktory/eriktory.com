@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div
+	id="button-cta-container"
+	class={`bg-green-500 p-4 col-span-2 sm:col-span-1 sm:order-2 justify-self-center ${className}`}
+>
+	<button id="button-cta" class="px-4 py-2 bg-green-700 text-white rounded text-sm">
+		Llamado a la accion
+	</button>
+</div>
