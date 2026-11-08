@@ -1,17 +1,14 @@
 ---
 import ButtonCTA from '../components/ButtonCTA.astro';
 import Logo from '../components/Logo.astro';
+import NavIcon from '../components/NavIcon.astro';
 ---
 
 <header id="header" class="w-full bg-red-500">
 	<div id="header-grid" class="grid grid-cols-2 sm:grid-cols-3 items-center w-full">
 		<Logo />
 
-		<div id="header-icon-container" class="bg-magenta-500 p-4 sm:order-3 sm:justify-self-end flex justify-end">
-			<svg id="header-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path id="header-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-		</div>
+		<NavIcon />
 
 		<ButtonCTA />
 	</div>
