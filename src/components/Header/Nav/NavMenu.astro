@@ -9,10 +9,10 @@ const navItems = [
 ---
 
 <div
-	id="header-nav"
-	class="p-4 sm:order-3 sm:justify-self-end flex justify-end self-stretch"
+	id="nav-menu"
+	class="hidden p-4 sm:order-3 sm:justify-self-end flex justify-end self-stretch"
 >
-	<nav class="flex items-center gap-8">
+	<nav class="flex flex-col sm:flex-row items-center sm:gap-8 gap-4">
 		{navItems.map((item) => (
 			<a
 				href={item.href}
