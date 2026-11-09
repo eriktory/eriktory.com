@@ -1,12 +1,13 @@
 ---
-// src/components/Main/Hero/HeroVisualCompass.astro
+import { Image } from 'astro:assets';
+import lightCompass from '../../../assets/HeroImages/light-compass-image.png';
 ---
 
 <div class="relative w-full max-w-xl mx-auto flex items-center justify-center">
   <!-- Imagen Principal (Brújula / Montaña) -->
   <div class="relative z-10 w-full overflow-hidden">
-    <img
-      src="/asset/HeroImages/light-compass-image.png"
+    <Image
+      src={lightCompass}
       alt="Ecosistemas Digitales Brújula"
       class="w-full h-auto object-contain filter drop-shadow-2xl"
     />
