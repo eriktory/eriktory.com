@@ -1,11 +1,4 @@
 ---
-export interface Props {
-  class?: string;
-}
-
-const { class: className = '' } = Astro.props;
----
-
-<main class={className}>
+<main class="w-full p-4 max-w-screen-xl mx-auto bg-green-500">
   <slot />
 </main>
