@@ -1,0 +1,25 @@
+---
+// src/components/Hero/HeroButton.astro
+interface Props {
+  href?: string;
+}
+
+const { href = "#" } = Astro.props;
+---
+
+<a
+  href={href}
+  class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-medium text-white bg-[#0f345c] hover:bg-[#1a497a] transition-colors rounded-full shadow-md group"
+>
+  <span>Descubrir cómo</span>
+  <svg
+    class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+  </svg>
+</a>
