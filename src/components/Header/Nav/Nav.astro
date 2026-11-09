@@ -1,0 +1,34 @@
+---
+// Nav.astro
+const navItems = [
+  { name: 'Inicio', href: '#', active: true },
+  { name: 'Servicios', href: '#servicios', active: false },
+  { name: 'Metodología', href: '#metodologia', active: false },
+  { name: 'Sobre mí', href: '#sobre-mi', active: false },
+  { name: 'Contacto', href: '#contacto', active: false },
+];
+---
+
+<div
+	id="header-nav"
+	class="p-4 sm:order-3 sm:justify-self-end flex justify-end self-stretch"
+>
+	<nav class="flex items-center gap-8">
+		{navItems.map((item) => (
+			<a
+				href={item.href}
+				class:list={[
+					"relative py-1 text-[0.875rem] transition-colors duration-200 font-sans",
+					item.active
+						? "font-bold text-[#0F2851]"
+						: "font-medium text-[#475569] hover:text-[#0F2851]"
+				]}
+			>
+				{item.name}
+				{item.active && (
+					<span class="absolute bottom-0 left-0 w-full h-[2.5px] bg-[#2563EB] rounded-full" />
+				)}
+			</a>
+		))}
+	</nav>
+</div>
