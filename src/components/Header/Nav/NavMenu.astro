@@ -10,14 +10,14 @@ const navItems = [
 
 <div
 	id="nav-menu"
-	class="hidden p-4 sm:order-3 sm:justify-self-end flex justify-end self-stretch"
+	class="hidden sm:order-3 sm:justify-self-end flex justify-end self-stretch"
 >
 	<nav class="flex flex-col sm:flex-row items-center sm:gap-8 gap-4">
 		{navItems.map((item) => (
 			<a
 				href={item.href}
 				class:list={[
-					'relative py-1 text-[0.875rem] transition-colors duration-200 font-sans',
+					'relative text-[0.875rem] transition-colors duration-200 font-sans',
 					item.active
 						? 'font-bold text-[#0F2851]'
 						: 'font-medium text-[#475569] hover:text-[#0F2851]',
