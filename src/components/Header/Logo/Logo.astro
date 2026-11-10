@@ -1,5 +1,6 @@
 ---
 // Logo.astro
+import YinYang from '../../../assets/Yin-Yang.png';
 ---
 
 <div
@@ -7,8 +8,17 @@
 	class="sm:order-1 sm:justify-self-start self-stretch"
 >
 	<a href="/" class="inline-flex items-center gap-3.5 group text-decoration-none">
-		<!-- Monograma EK -->
-		<span class="font-serif font-extrabold text-2xl tracking-tight text-[#0F2851] leading-none">
+		<img
+			src={YinYang}
+			alt="Logo Yin-Yang"
+			class="h-7 w-auto object-contain"
+			onerror="this.style.display='none'; this.parentElement.querySelector('.monograma-fallback').style.display='inline-flex';"
+		/>
+		<!-- Monograma EK como fallback si la imagen no carga -->
+		<span
+			class="monograma-fallback font-serif font-extrabold text-2xl tracking-tight text-[#0F2851] leading-none"
+			style="display:none"
+		>
 			EK
 		</span>
 
