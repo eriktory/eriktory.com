@@ -8,10 +8,10 @@ interface Props {
 const { href = '#contacto', text = 'Hablemos' } = Astro.props;
 ---
 
-<div id="button-cta-container" class="w-full flex justify-center">
+<div id="button-cta-container" class="w-full h-full flex items-center justify-center">
   <a
     href={href}
-    class="inline-flex items-center justify-center gap-2 rounded-full border border-[#0F2851] text-[#0F2851] font-semibold text-[0.875rem] transition-all duration-200 hover:bg-[#0F2851] hover:text-white group"
+    class="inline-flex items-center justify-center gap-2 rounded-full border border-[#0F2851] px-5 py-2 text-sm sm:px-6 sm:py-2.5 sm:text-base text-[#0F2851] font-semibold transition-all duration-200 hover:bg-[#0F2851] hover:text-white group"
   >
     <span>{text}</span>
     <svg
@@ -20,7 +20,7 @@ const { href = '#contacto', text = 'Hablemos' } = Astro.props;
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
-      class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5"
+      class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-0.5"
     >
       <path
         stroke-linecap="round"
