@@ -1,23 +1,59 @@
 ---
-import Header from '../components/Header/Header.astro';
 import Footer from '../components/Footer/Footer.astro';
 import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Erik Tory — Consultor estratégico',
+  description = 'Diseño e implemento ecosistemas digitales de IA para optimizar la gestión, automatizar procesos y potenciar las capacidades operativas de tu organización.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL('/favicon-512.png', Astro.site);
 ---
 
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0F2851" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Erik Tory</title>
-	</head>
-	<body class="h-dvh border-2 border-slate-300 rounded-lg bg-white text-slate-900 antialiased flex flex-col overflow-x-hidden">
-		<Header />
-		<slot/>
-		<Footer />
-	</body>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Erik Tory" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <title>{title}</title>
+  </head>
+
+  <body
+    id="top"
+    class="min-h-dvh border-2 border-slate-300 rounded-lg bg-white text-slate-900 antialiased flex flex-col"
+  >
+    <a href="#main-content" class="skip-link">
+      Saltar al contenido
+    </a>
+    <slot />
+    <Footer />
+  </body>
 </html>

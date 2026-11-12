@@ -4,16 +4,16 @@ interface Props {
   href?: string;
 }
 
-const { href = "#" } = Astro.props;
+const { href = '#' } = Astro.props;
 ---
 
 <a
   href={href}
-  class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-medium text-white bg-[#0f345c] hover:bg-[#1a497a] transition-colors rounded-full shadow-md group"
+  class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-[#0f345c] hover:bg-[#1a497a] transition-colors rounded-full shadow-md group"
 >
   <span>Descubrir cómo</span>
   <svg
-    class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+    class="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"
     fill="none"
     stroke="currentColor"
     stroke-width="2"

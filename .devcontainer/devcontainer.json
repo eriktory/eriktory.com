@@ -1,6 +1,6 @@
 {
   "name": "eriktory.com",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:26",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
   "forwardPorts": [4321],
   "customizations": {
     "vscode": {

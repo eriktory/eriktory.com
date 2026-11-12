@@ -1,9 +1,48 @@
-@import "tailwindcss";
-
-
+@import 'tailwindcss';
 
 @theme {
   --color-cyan-500: #06b6d4;
   --color-green-500: #10b981;
   --color-magenta-500: #d946ef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #0f2851;
+  color: #ffffff;
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform 150ms ease-in-out;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

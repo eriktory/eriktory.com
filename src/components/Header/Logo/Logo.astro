@@ -1,38 +1,35 @@
 ---
-// Logo.astro
-import YinYang from '../../../assets/Yin-Yang.png?url';
+import { Image } from 'astro:assets';
+import YinYang from '../../../assets/yin-yang-logo.png';
 ---
 
-<div
-	id="logo-container"
-	class="h-full"
->
-	<a href="/" class="h-full grid grid-cols-5 items-center col-span-3 group text-decoration-none">
-		<div id="logo-images" class="h-full col-span-1 flex justify-center items-center bg-amber-600">
-			<img
-				src={YinYang}
-				alt="Logo Yin-Yang"
-				class="h-14 w-auto object-contain relative z-10"
-				onerror="this.style.display='none'; this.parentElement.querySelector('.monograma-fallback').style.display='inline-flex';"
-			/>
-			<!-- Monograma EK como fallback si la imagen no carga -->
-			<span
-				class="monograma-fallback font-serif font-extrabold text-2xl tracking-tight text-[#0F2851] leading-none"
-				style="display:none"
-			>
-				EK
-			</span>
-		</div>
+<div id="logo-container" class="h-full">
+  <a href="/" class="h-full grid grid-cols-5 items-center group no-underline">
+    <div id="logo-images" class="h-full col-span-1 flex justify-center items-center">
+      <Image
+        src={YinYang}
+        alt="Logo Yin-Yang"
+        class="h-14 w-auto object-contain relative z-10"
+        onerror="this.style.display='none'; this.parentElement.querySelector('.monograma-fallback').style.display='inline-flex';"
+      />
+      <!-- Monograma EK como fallback si la imagen no carga -->
+      <span
+        class="monograma-fallback font-serif font-extrabold text-2xl tracking-tight text-[#0F2851] leading-none"
+        style="display:none"
+      >
+        EK
+      </span>
+    </div>
 
-		<div id="logo-title-container" class="col-span-4">
-			<div class="flex flex-col justify-center">
-				<span class="text-[0.95rem] font-bold tracking-[0.18em] text-[#0F2851] uppercase leading-tight">
-					ERIK TORY
-				</span>
-				<span class="text-[0.625rem] font-semibold tracking-[0.14em] text-[#64748B] uppercase leading-tight ">
-					CONSULTOR ESTRATÉGICO
-				</span>
-			</div>
-		</div>
-	</a>
+    <div id="logo-title-container" class="col-span-4">
+      <div class="flex flex-col justify-center">
+        <span class="text-[1.15rem] sm:text-[1.5rem] font-bold tracking-[0.1em] text-[#0F2851] uppercase leading-tight">
+          ERIK TORY
+        </span>
+        <span class="text-[0.75rem] font-semibold tracking-[0.11em] text-[#64748B] uppercase leading-tight">
+          CONSULTOR ESTRATÉGICO
+        </span>
+      </div>
+    </div>
+  </a>
 </div>
