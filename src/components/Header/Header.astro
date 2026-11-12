@@ -5,8 +5,15 @@ import Nav from './Nav/Nav.astro';
 import NavMenu from './Nav/NavMenu.astro';
 ---
 
-<header class="h-12 sm:h-14 w-full bg-[#F8FAFC] border-b border-slate-100 grid grid-cols-12 items-stretch">
-	<div id="header-logo" class="h-full col-span-3 bg-cyan-400"><Logo /></div>
-	<div id="header-cta" class="h-full col-span-8 bg-green-400"><ButtonCTA /></div>
-	<div id="header-nav" class="h-full col-span-1 bg-pink-400"><Nav /></div>
+<header class="relative h-12 sm:h-14 w-full bg-[#F8FAFC] border-b border-slate-100 grid grid-cols-12 items-stretch">
+  <div id="header-logo" class="h-full col-span-3 bg-cyan-400">
+    <Logo />
+  </div>
+  <div id="header-cta" class="h-full col-span-8 bg-green-400">
+    <ButtonCTA />
+  </div>
+  <div id="header-nav" class="h-full col-span-1 bg-pink-400">
+    <Nav />
+  </div>
+  <NavMenu />
 </header>

@@ -1,0 +1,21 @@
+{
+  "name": "Erik Tory",
+  "short_name": "Erik Tory",
+  "description": "Ecosistemas digitales de IA, estrategia y tecnología.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0F2851",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,32 +1,39 @@
 ---
+import { Image } from 'astro:assets';
 import lightCompass from '../../../assets/HeroImages/light-compass-image.png';
 ---
 
-<div
-	class="absolute inset-0 z-0 w-full h-full bg-cover bg-center"
-	style={{ backgroundImage: `url(${lightCompass.src})` }}
-></div>
+<Image
+  src={lightCompass}
+  alt=""
+  aria-hidden="true"
+  class="absolute inset-0 z-0 h-full w-full object-cover"
+/>
 
 <!-- Indicador 1: ESTRATEGIA (10%) -->
-<div class="absolute top-4 left-6 z-20 flex flex-col items-center">
-	<div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
-		10%
-	</div>
-	<span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">Estrategia</span>
+<div class="absolute top-4 left-6 z-20 hidden md:flex md:flex-col md:items-center">
+  <div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
+    10%
+  </div>
+  <span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">
+    Estrategia
+  </span>
 </div>
 
 <!-- Indicador 2: TECNOLOGÍA (30%) -->
-<div class="absolute top-10 right-8 z-20 flex flex-col items-center">
-	<div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
-		30%
-	</div>
-	<span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">Tecnología</span>
+<div class="absolute top-10 right-8 z-20 hidden md:flex md:flex-col md:items-center">
+  <div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
+    30%
+  </div>
+  <span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">
+    Tecnología
+  </span>
 </div>
 
 <!-- Indicador 3: EJECUCIÓN (60%) -->
-<div class="absolute bottom-6 right-6 z-20 flex flex-col items-center">
-	<div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
-		60%
-	</div>
-	<span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">Ejecución</span>
+<div class="absolute bottom-6 right-6 z-20 hidden md:flex md:flex-col md:items-center">
+  <div class="w-16 h-16 rounded-full border-2 border-blue-900 bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg text-blue-950 font-bold text-base">
+    60%
+  </div>
+  <span class="mt-1 text-[10px] font-bold tracking-widest text-slate-700 uppercase">Ejecución</span>
 </div>
