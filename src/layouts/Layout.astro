@@ -48,12 +48,11 @@ const socialImageURL = new URL('/favicon-512.png', Astro.site);
 
   <body
     id="top"
-    class="min-h-dvh border-2 border-slate-300 rounded-lg bg-white text-slate-900 antialiased flex flex-col"
+    class="bg-white text-slate-900 antialiased grid grid-rows-[100dvh_auto] h-dvh"
   >
-    <a href="#main-content" class="skip-link">
-      Saltar al contenido
-    </a>
-    <slot />
+    <div class="overflow-hidden">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
