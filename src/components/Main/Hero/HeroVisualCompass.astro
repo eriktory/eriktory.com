@@ -1,14 +1,19 @@
 ---
 import { Image } from 'astro:assets';
-import lightCompass from '../../../assets/HeroImages/hero_01_mv_light.jpg';
+import mobileCompass from '../../../assets/HeroImages/hero_01_mv_light.jpg';
+import desktopCompass from '../../../assets/HeroImages/light-compass-image.png';
 ---
 
-<Image
-  src={lightCompass}
-  alt=""
-  aria-hidden="true"
-  class="absolute inset-0 z-0 h-full w-full object-cover"
-/>
+<div class="absolute inset-0 z-0">
+  <Image
+    src={mobileCompass}
+    srcset={`${mobileCompass.src} 768w, ${desktopCompass.src} 1473w`}
+    sizes="(min-width: 640px) 1440px, 390px"
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+</div>
 
 <!-- Indicador 1: ESTRATEGIA (10%) -->
 <div class="absolute top-20 left-6 z-20 hidden">
