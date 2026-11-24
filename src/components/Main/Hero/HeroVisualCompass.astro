@@ -4,23 +4,24 @@ import mobileCompass from '../../../assets/HeroImages/hero_01_mv_light.jpg';
 import desktopCompass from '../../../assets/HeroImages/light-compass-image.png';
 ---
 
-<div class="absolute inset-0 z-0 overflow-hidden">
-  <!-- Móvil (< sm): ancho 100%, alto automático, anclada arriba -->
-  <Image
-    src={mobileCompass}
-    alt=""
-    aria-hidden="true"
-    loading="eager"
-    class="absolute top-0 left-0 block h-auto w-full sm:hidden"
-  />
+<div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+  <!-- Móvil (< sm): ancho 100%, alto automático, anclada arriba, con fundido inferior -->
+  <div class="relative sm:hidden">
+    <Image
+      src={mobileCompass}
+      alt=""
+      loading="eager"
+      class="block h-auto w-full"
+    />
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-slate-50 to-transparent"></div>
+  </div>
 
   <!-- Escritorio (>= sm): llena el contenedor -->
   <Image
     src={desktopCompass}
     alt=""
-    aria-hidden="true"
     loading="eager"
-    class="absolute inset-0 hidden h-full w-full object-cover sm:block"
+    class="hidden h-full w-full object-cover sm:block"
   />
 </div>
 
