@@ -7,14 +7,13 @@ import HeroVisualCompass from './HeroVisualCompass.astro';
 import HeroIndicators from './HeroIndicators.astro';
 ---
 
-<section class="relative flex w-full min-h-dvh items-center overflow-hidden bg-slate-50">
+<section class="relative flex flex-col sm:flex-row w-full min-h-dvh sm:items-center overflow-hidden bg-slate-50">
   <HeroVisualCompass />
   <HeroIndicators />
 
-  <div class="max-w-7xl px-4 sm:px-6 lg:px-10 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Columna Izquierda: Textos y CTA (Ancho: 7 columnas) -->
-      <div class="lg:col-span-7 flex flex-col items-start space-y-8 py-16 lg:py-24">
+  <div class="relative z-10 order-1 sm:order-none mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-center">
+      <div class="lg:col-span-7 flex flex-col items-start space-y-3 sm:space-y-5 py-6 sm:py-12 lg:py-12">
         <HeroHeading />
         <HeroDescription />
         <div class="pt-2">
@@ -22,8 +21,7 @@ import HeroIndicators from './HeroIndicators.astro';
         </div>
       </div>
 
-      <!-- Columna Derecha: reservada (el fondo cubre toda la sección) -->
-      <div class="lg:col-span-5"></div>
+      <div class="hidden lg:block lg:col-span-5"></div>
     </div>
   </div>
 </section>

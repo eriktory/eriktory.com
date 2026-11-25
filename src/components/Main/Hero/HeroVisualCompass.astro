@@ -8,23 +8,24 @@ const mobile = await getImage({ src: mobileCompass, format: 'webp', quality: 85 
 const desktop = await getImage({ src: desktopCompass, format: 'webp', quality: 85 });
 ---
 
-<div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-  <div class="relative sm:h-full">
-    <picture class="block sm:h-full">
-      <source media="(min-width: 640px)" srcset={desktop.src} type="image/webp" />
-      <img
-        src={mobile.src}
-        width={mobile.attributes.width}
-        height={mobile.attributes.height}
-        alt=""
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        class="block h-auto w-full sm:h-full sm:object-cover sm:object-right"
-      />
-    </picture>
+<div class="relative order-2 mt-auto overflow-hidden sm:absolute sm:inset-0 sm:order-0 sm:mt-0 z-0" aria-hidden="true">
+  <picture class="block sm:h-full">
+    <source media="(min-width: 640px)" srcset={desktop.src} type="image/webp" />
+    <img
+      src={mobile.src}
+      width={mobile.attributes.width}
+      height={mobile.attributes.height}
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="block h-auto w-full sm:h-full sm:object-cover sm:object-right"
+    />
+  </picture>
 
-    <!-- Fundido inferior, solo en móvil -->
-    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-slate-50 to-transparent sm:hidden"></div>
-  </div>
+  <!-- Velo sobre toda la imagen, solo en móvil -->
+<div class="pointer-events-none absolute inset-0 bg-slate-50/75 sm:hidden"></div>
+
+<!-- Fundido superior, solo en móvil: une la imagen con el fondo del texto -->
+<div class="pointer-events-none absolute inset-x-0 top-0 h-20 bg-linear-to-b from-slate-50 to-transparent sm:hidden"></div>
 </div>
