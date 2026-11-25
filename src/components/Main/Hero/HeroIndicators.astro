@@ -1,0 +1,22 @@
+---
+// src/components/Main/Hero/HeroIndicators.astro
+const indicators = [
+  { value: '10%', label: 'Estrategia', position: 'top-20 left-6' },
+  { value: '30%', label: 'Tecnología', position: 'top-24 right-8' },
+  { value: '60%', label: 'Ejecución', position: 'bottom-6 right-6' },
+];
+---
+
+<!-- Quita "hidden" del contenedor para mostrar los tres indicadores -->
+<div class="hidden">
+  {indicators.map(({ value, label, position }) => (
+    <div class={`absolute z-20 ${position}`}>
+      <div class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-blue-900 bg-white/90 text-base font-bold text-blue-950 shadow-lg backdrop-blur-sm">
+        {value}
+      </div>
+      <span class="mt-1 text-[10px] font-bold uppercase tracking-widest text-slate-700">
+        {label}
+      </span>
+    </div>
+  ))}
+</div>
